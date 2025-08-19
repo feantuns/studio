@@ -11,6 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { ThemeToggle } from './theme-toggle';
 
 const NavLinks = ({ className }: { className?: string }) => (
   <>
@@ -42,7 +43,7 @@ const UserMenu = () => (
   <DropdownMenu>
     <DropdownMenuTrigger asChild>
       <Button variant="ghost" className="relative h-10 w-10 rounded-full">
-        <Avatar className="h-10 w-10 border-2 border-accent">
+        <Avatar className="h-10 w-10 border-2 border-primary">
           <AvatarImage src="https://placehold.co/100x100.png" alt="User" data-ai-hint="person" />
           <AvatarFallback>AD</AvatarFallback>
         </Avatar>
@@ -87,6 +88,7 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-4">
+          <ThemeToggle />
           <div className="hidden md:block">
             <UserMenu />
           </div>
